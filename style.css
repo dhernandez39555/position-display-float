@@ -1,0 +1,61 @@
+.parent-container{
+    background-color: beige;
+    border: 2px solid black;
+    width: 75vw;
+    height: 175vh;
+    padding: 5px;
+    font-family:Arial, Helvetica, sans-serif;
+
+    position: relative;
+}
+
+.child{
+    padding:25px;
+
+}
+
+.static{
+    border: 2px solid red;
+    background-color: red;
+    /* directional properties have NO effect IF element is static */
+}
+
+.relative{
+    border: 2px solid blueviolet;
+    background-color: blueviolet;
+    /* position: relative; */
+    /* offset is relative to ITSELF and does NOT affect OTHER elements
+    CAN make use of directional properties and out of doc flow
+     ! AVOID IF POSSIBLE DUE TO MANUAL DEPENDENCIES */
+    /* top: 25px;
+    left: 25px; */
+}
+
+.absolute{
+    border: 2px solid green;
+    background-color: green;
+    position: absolute;
+    /* removed from doc flow
+    !attaches to closest non-static root */
+    top: 0px;
+}
+
+.fixed{
+    border: 2px solid teal;
+    background-color: teal;
+    position: fixed;
+    /* leaves flow and remains in view when passed
+    ! based on viewport unless transform, perspective, or filter are set */
+
+
+}
+
+.sticky{
+    border: 2px solid gray;
+    background-color: grey;
+    position: sticky;
+    /* combo of absolute and fixed */
+    /* relative by default (respects flow) */
+    /* ! respects doc flow, follows when passed, and supersedes during follow*/
+    top: 75px;
+}

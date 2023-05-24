@@ -59,3 +59,49 @@
     /* ! respects doc flow, follows when passed, and supersedes during follow*/
     top: 75px;
 }
+/* display elements -> block v inline
+block is top to bottom
+inline is side-by-side */
+
+.display-container{
+    margin-top: 2em;
+}
+
+.block-container{
+    border: 2px solid black;
+    margin: 2px;
+}
+/* !elements have a predetermined display property that can be modified in line 
+!e.g display: border; */
+.inline-element{
+    margin: 5px;
+    
+}
+
+.inline-block{
+    border: 2px solid black;
+    margin-top: 2px;
+    /* block by default */
+    display: inline-block;
+    /* allows change of size of an inline element 
+    (cue hannah montana theme song)
+    !maintains contiguous form (try setting 3 as inline to see) */
+    width: 125px;
+}
+
+.float-container{
+    margin-top: 2em;
+    border: 2px solid blue;
+    height: 20vh;
+}
+
+.float-box{
+    margin: 5px;
+    border: 2px solid orange;
+    background-color: orange;
+    width: 50px;
+    height: 50px;
+
+    float: right;
+    /* shifts elements laterally */
+}
